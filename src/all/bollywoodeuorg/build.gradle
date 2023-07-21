@@ -1,0 +1,17 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlinx-serialization'
+
+ext {
+    extName = 'bollywood.eu.org'
+    pkgNameSuffix = 'all.bollywoodeuorg'
+    extClass = '.BollywoodEuOrg'
+    extVersionCode = 1
+    libVersion = '13'
+}
+
+dependencies {
+    implementation(project(":lib-synchrony"))
+}
+
+apply from: "$rootDir/common.gradle"
