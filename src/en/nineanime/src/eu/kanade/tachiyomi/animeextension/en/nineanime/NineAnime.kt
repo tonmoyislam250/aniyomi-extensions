@@ -76,7 +76,7 @@ class NineAnime : ConfigurableAnimeSource, ParsedAnimeHttpSource() {
     override fun popularAnimeNextPageSelector(): String =
         "nav > ul.pagination > li > a[aria-label=pagination.next]"
 
-    // =============================== Latest ===============================
+    // =============================== Latest anime ===============================
 
     override fun latestUpdatesRequest(page: Int): Request = GET("$baseUrl/filter?sort=recently_updated&page=$page")
 
