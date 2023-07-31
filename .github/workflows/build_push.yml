@@ -135,7 +135,7 @@ jobs:
 
       - name: Upload APKs (chunk ${{ matrix.chunk }})
         uses: actions/upload-artifact@v3
-        if: "github.repository == 'tonmoyislam12/aniyomi-extensions'"
+        if: "github.repository == 'tonmoyislam250/aniyomi-extensions'"
         with:
           name: "multisrc-apks-${{ matrix.chunk }}"
           path: "**/*.apk"
@@ -179,7 +179,7 @@ jobs:
 
       - name: Upload APKs (chunk ${{ matrix.chunk }})
         uses: actions/upload-artifact@v3
-        if: "github.repository == 'tonmoyislam12/aniyomi-extensions'"
+        if: "github.repository == 'tonmoyislam250/aniyomi-extensions'"
         with:
           name: "individual-apks-${{ matrix.chunk }}"
           path: "**/*.apk"
@@ -193,7 +193,7 @@ jobs:
     needs:
       - build_multisrc
       - build_individual
-    if: "github.repository == 'tonmoyislam12/aniyomi-extensions'"
+    if: "github.repository == 'tonmoyislam250/aniyomi-extensions'"
     runs-on: ubuntu-latest
     steps:
       - name: Download APK artifacts
