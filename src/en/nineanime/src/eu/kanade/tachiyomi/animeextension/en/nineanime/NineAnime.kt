@@ -341,7 +341,7 @@ class NineAnime : ConfigurableAnimeSource, ParsedAnimeHttpSource() {
             when (action) {
                 "rawVizcloud", "rawMcloud" -> {
                     val rawURL = json.decodeFromString<RawResponse>(it).rawURL
-                    val referer = if (action == "rawVizcloud") "https://vidstream.pro/" else "https://mcloud.to/"
+                    val referer = if (action == "rawVizcloud") "https://vidstream.to/" else "https://mcloud.to/"
                     val apiResponse = client.newCall(
                         GET(
                             url = rawURL,
